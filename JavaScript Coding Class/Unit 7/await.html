@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let input = prompt("Enter Your Password")
+       function login() {
+        return new Promise( function (resolve,reject) {
+    if (input == "1234") {
+        setTimeout(function () {
+            resolve("Access Granted");
+        }, 3000);
+    } else {
+        setTimeout(function () {
+            resolve("Access Denied");
+        }, 3000); 
+    }
+});
+
+ checkCredentials.then(function (result) {
+    alert(result);
+}).catch(function (error) {
+    alert(error);
+});
+       } 
+        
+       
+       async function asyncCall() {
+            const output = await login(); // "access granted"/ "access denied"
+            console.log(output);
+
+       }
+    
+    console.log("start");
+    asyncCall().catch(function (error) {
+        console.err(error);
+    });
+
+    console.log("end")
+
+    let image = "unloaded image"
+ 
+    function loadImage() {
+        return new Promise(function (resolve,reject) {
+            setTimeout(() => {
+           resolve("this is an image!")
+        },500);
+        })  
+        
+    }
+
+    async function load() {
+        image = await loadImage();
+        console.log(image)
+    }
+
+     load();
+    console.log(image);
+
+    </script>
+</html>
