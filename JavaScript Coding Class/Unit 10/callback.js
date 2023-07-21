@@ -1,0 +1,37 @@
+let numbers = [12,32,4,1,51,523,43]
+let string = "Hello World! I am Joseph lOL LOL LOL"
+let chars = string.split();
+// insertion sort <---
+// Sorting Algorithms
+
+
+function sorting(array) {
+    let sorted = array.sort(function (x,y) {
+        return y - x; // -i, 0, i
+    });
+
+    console.log(sorted);
+}
+
+
+
+//filtering arrays
+function filter(array) {
+let filtered = array.filter(isL)
+}
+console.log(filtered);
+
+
+function isL(c) {
+return c == 'l';
+
+}
+
+filter(chars)
+
+let evenNumbers = numbers.filter(function (element,index) {
+return element % 2 === 0;                                  //true if we want to include either false
+});
+
+
+
